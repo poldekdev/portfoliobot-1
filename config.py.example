@@ -1,0 +1,58 @@
+TOKEN = "" # Token from https://discord.dev
+ENABLED_COGS = {"lobby", "suggestions"} # Cogs that the bot loads during init
+
+BASIC = {
+    "StatusContent": "https://poldek.is-a.dev", # Content of bot status (string after "Listening to...")
+}
+# Welcomer (lobby) configuration
+WELCOMER = {
+    "ChannelId": 1457355160224399504, #Where should be the welcome message sent?
+    "EmbedTitle": None, #Title of the embed
+    # Description of the embed, available variables:
+    # [usermention] -  Mention of the user
+    # [membercount] - Member count after the join
+    "EmbedDescription": """
+###  `` 👋 | PoldekDEV | Welcome to our server ``
+> Welcome [usermention] to our server, you're a [membercount]th member of our server,
+> Please check our rules before interacting in our server
+""",
+    "EmbedColor": 0x36454F, # Embed colo(u)r
+    "EmbedImage": None, # (Bigger) image URL
+    "EmbedFooter": None, # Embed Footer
+}
+# Goodbyer (lobby) configuration
+GOODBYER = {
+    "ChannelId": 1457355160224399504, #Where should be the goodbye message sent
+    "EmbedTitle": None, #Title of the embed
+    # Description of the embed, available variables:
+    # [usermention] -  Mention of the user
+    # [membercount] - Member count after the leave
+    "EmbedDescription": """
+###  `` 👋 | PoldekDEV | Goodbye ``
+> [usermention] has left our server,
+> Now our server has [membercount] members
+""",
+    "EmbedColor": 0x36454F, # Embed colo(u)r
+    "EmbedImage": None, # (Bigger) image URL
+    "EmbedFooter": None, # Embed Footer
+}
+SUGGESTIONS = {
+    "ChannelId": 1457355148656382014, # Where should users send their suggestions and where should the bot send the suggestion embed?
+    "EmbedTitle": None, # Title of the embed
+    # Description of the embed, available variables:
+    # [author] - Mention the suggestion's author
+    # [content] - Suggestion content
+    "EmbedDescription": """
+### `` 📊 | PoldekDEV | New suggestion ``
+> Author of the suggestion: [author]
+> Content of the suggestion: [content]
+How to vote?
+> Below select ✅ or ❌
+""",
+    "EmbedColor": 0x36454F, # Embed colo(u)r
+    "EmbedImage": None, # (Bigger) image URL
+    "EmbedFooter": None, # Embed Footer
+    "YesReaction": "✅", # First reaction
+    "NoReaction": "❌" # Second reaction
+
+}
